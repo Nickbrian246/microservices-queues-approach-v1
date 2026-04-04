@@ -19,6 +19,15 @@
         "tsConfigPath": "libs/database/tsconfig.lib.json"
       }
     },
+    "providers": {
+      "type": "library",
+      "root": "libs/providers",
+      "entryFile": "index",
+      "sourceRoot": "libs/providers/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/providers/tsconfig.lib.json"
+      }
+    },
     "audit-service": {
       "type": "application",
       "root": "apps/audit-service",

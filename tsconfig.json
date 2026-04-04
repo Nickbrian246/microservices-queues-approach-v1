@@ -19,7 +19,9 @@
     "noFallthroughCasesInSwitch": false,
     "paths": {
       "@app/database": ["libs/database/src"],
-      "@app/database/*": ["libs/database/src/*"]
+      "@app/database/*": ["libs/database/src/*"],
+      "@app/providers": ["libs/providers/src"],
+      "@app/providers/*": ["libs/providers/src/*"]
     }
   }
 }
