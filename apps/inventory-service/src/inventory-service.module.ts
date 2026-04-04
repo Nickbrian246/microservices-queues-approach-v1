@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
-import { InventoryServiceController } from './inventory-service.controller';
-import { InventoryServiceService } from './inventory-service.service';
+import { ConfigModule } from '@nestjs/config';
+import { DatabaseModule } from '@app/database';
 
 @Module({
-  imports: [],
-  controllers: [InventoryServiceController],
-  providers: [InventoryServiceService],
+  imports: [
+    ConfigModule.forRoot({ isGlobal: true }),
+    DatabaseModule.forService('INVENTORY'),
+  ],
 })
 export class InventoryServiceModule {}

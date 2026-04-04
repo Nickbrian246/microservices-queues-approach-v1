@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
-import { AuditServiceController } from './audit-service.controller';
-import { AuditServiceService } from './audit-service.service';
+import { ConfigModule } from '@nestjs/config';
+import { DatabaseModule } from '@app/database';
 
 @Module({
-  imports: [],
-  controllers: [AuditServiceController],
-  providers: [AuditServiceService],
+  imports: [
+    ConfigModule.forRoot({ isGlobal: true }),
+    DatabaseModule.forService('AUDIT'),
+  ],
 })
 export class AuditServiceModule {}
