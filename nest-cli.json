@@ -28,6 +28,24 @@
         "tsConfigPath": "libs/providers/tsconfig.lib.json"
       }
     },
+    "patterns": {
+      "type": "library",
+      "root": "libs/patterns",
+      "entryFile": "index",
+      "sourceRoot": "libs/patterns/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/patterns/tsconfig.lib.json"
+      }
+    },
+    "dtos": {
+      "type": "library",
+      "root": "libs/dtos",
+      "entryFile": "index",
+      "sourceRoot": "libs/dtos/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/dtos/tsconfig.lib.json"
+      }
+    },
     "audit-service": {
       "type": "application",
       "root": "apps/audit-service",

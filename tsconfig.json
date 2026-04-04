@@ -21,7 +21,11 @@
       "@app/database": ["libs/database/src"],
       "@app/database/*": ["libs/database/src/*"],
       "@app/providers": ["libs/providers/src"],
-      "@app/providers/*": ["libs/providers/src/*"]
+      "@app/providers/*": ["libs/providers/src/*"],
+      "@app/patterns": ["libs/patterns/src"],
+      "@app/patterns/*": ["libs/patterns/src/*"],
+      "@app/dtos": ["libs/dtos/src"],
+      "@app/dtos/*": ["libs/dtos/src/*"]
     }
   }
 }
