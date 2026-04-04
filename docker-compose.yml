@@ -1,0 +1,114 @@
+services:
+  mysql_users_db:
+    image: mysql:latest
+    container_name: mysql_users_db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${USERS_DB_NAME}
+      MYSQL_USER: ${USERS_DB_USER}
+      MYSQL_PASSWORD: ${USERS_DB_PASSWORD}
+    ports:
+      - "${USERS_DB_PORT}:3306"
+    volumes:
+      - mysql_users_data:/var/lib/mysql
+
+  mysql_product_db:
+    image: mysql:latest
+    container_name: mysql_product_db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${PRODUCT_DB_NAME}
+      MYSQL_USER: ${PRODUCT_DB_USER}
+      MYSQL_PASSWORD: ${PRODUCT_DB_PASSWORD}
+    ports:
+      - "${PRODUCT_DB_PORT}:3306"
+    volumes:
+      - mysql_product_data:/var/lib/mysql
+
+  mysql_inventory_db:
+    image: mysql:latest
+    container_name: mysql_inventory_db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${INVENTORY_DB_NAME}
+      MYSQL_USER: ${INVENTORY_DB_USER}
+      MYSQL_PASSWORD: ${INVENTORY_DB_PASSWORD}
+    ports:
+      - "${INVENTORY_DB_PORT}:3306"
+    volumes:
+      - mysql_inventory_data:/var/lib/mysql
+
+  mysql_order_db:
+    image: mysql:latest
+    container_name: mysql_order_db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${ORDER_DB_NAME}
+      MYSQL_USER: ${ORDER_DB_USER}
+      MYSQL_PASSWORD: ${ORDER_DB_PASSWORD}
+    ports:
+      - "${ORDER_DB_PORT}:3306"
+    volumes:
+      - mysql_order_data:/var/lib/mysql
+
+  mysql_payment_db:
+    image: mysql:latest
+    container_name: mysql_payment_db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${PAYMENT_DB_NAME}
+      MYSQL_USER: ${PAYMENT_DB_USER}
+      MYSQL_PASSWORD: ${PAYMENT_DB_PASSWORD}
+    ports:
+      - "${PAYMENT_DB_PORT}:3306"
+    volumes:
+      - mysql_payment_data:/var/lib/mysql
+
+  mysql_shipping_db:
+    image: mysql:latest
+    container_name: mysql_shipping_db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${SHIPPING_DB_NAME}
+      MYSQL_USER: ${SHIPPING_DB_USER}
+      MYSQL_PASSWORD: ${SHIPPING_DB_PASSWORD}
+    ports:
+      - "${SHIPPING_DB_PORT}:3306"
+    volumes:
+      - mysql_shipping_data:/var/lib/mysql
+
+  mysql_audit_db:
+    image: mysql:latest
+    container_name: mysql_audit_db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${AUDIT_DB_NAME}
+      MYSQL_USER: ${AUDIT_DB_USER}
+      MYSQL_PASSWORD: ${AUDIT_DB_PASSWORD}
+    ports:
+      - "${AUDIT_DB_PORT}:3306"
+    volumes:
+      - mysql_audit_data:/var/lib/mysql
+
+  mysql_notification_db:
+    image: mysql:latest
+    container_name: mysql_notification_db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${NOTIFICATION_DB_NAME}
+      MYSQL_USER: ${NOTIFICATION_DB_USER}
+      MYSQL_PASSWORD: ${NOTIFICATION_DB_PASSWORD}
+    ports:
+      - "${NOTIFICATION_DB_PORT}:3306"
+    volumes:
+      - mysql_notification_data:/var/lib/mysql
+
+volumes:
+  mysql_users_data:
+  mysql_product_data:
+  mysql_inventory_data:
+  mysql_order_data:
+  mysql_payment_data:
+  mysql_shipping_data:
+  mysql_audit_data:
+  mysql_notification_data:
