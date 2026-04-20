@@ -1,4 +1,5 @@
 export * from './constants/microservice-names';
+export * from './constants/queue-names';
 export * from './users.provider';
 export * from './product.provider';
 export * from './inventory.provider';
