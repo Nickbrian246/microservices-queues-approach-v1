@@ -103,6 +103,18 @@ services:
     volumes:
       - mysql_notification_data:/var/lib/mysql
 
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD}
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+
 volumes:
   mysql_users_data:
   mysql_product_data:
@@ -112,3 +124,4 @@ volumes:
   mysql_shipping_data:
   mysql_audit_data:
   mysql_notification_data:
+  rabbitmq_data:
